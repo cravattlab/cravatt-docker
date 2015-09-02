@@ -2,9 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Radu Suciu <radusuciu@gmail.com>
 
-RUN echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
 RUN echo "deb http://cran.stat.ucla.edu/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
-RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 0x056E8E56
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 RUN apt-get update && apt-get install -y \
@@ -14,8 +12,7 @@ RUN apt-get update && apt-get install -y \
     pdftk \
     python3-pip \
     npm \
-    git \
-    rabbitmq-server
+    git
 
 # Setup R dependencies for cimage
 RUN echo 'source("http://bioconductor.org/biocLite.R")' >> rscript.R
