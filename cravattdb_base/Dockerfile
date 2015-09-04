@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     pdftk \
     python3-pip \
     npm \
+    libpq-dev \
     git
 
 # Setup R dependencies for cimage
