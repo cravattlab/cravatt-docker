@@ -2,6 +2,7 @@ FROM cravattlab/cimage_base
 
 MAINTAINER Radu Suciu <radusuciu@gmail.com>
 
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
 RUN apt-get update && apt-get -y install \
     python3-pip \
     npm \
@@ -11,4 +12,4 @@ RUN apt-get update && apt-get -y install \
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN pip3 install virtualenv
-RUN npm install -g bower gulp
+RUN npm install -g gulp typescript typings concurrently
