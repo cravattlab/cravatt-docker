@@ -2,10 +2,10 @@ FROM cravattlab/cimage_base
 
 MAINTAINER Radu Suciu <radusuciu@gmail.com>
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get update && apt-get -y install \
     python3-pip \
-    npm \
+    nodejs \
     libpq-dev \
     python-psycopg2 \
     git
