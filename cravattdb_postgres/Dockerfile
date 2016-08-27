@@ -1,4 +1,4 @@
-FROM postgres
+FROM postgres:9.5
 
 # by convention .sh files in below directory are automagically executed
 # during setup

@@ -16,6 +16,9 @@ EOSQL
 gosu postgres psql --user postgres <<- EOSQL
    GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;
 EOSQL
+gosu postgres psql --user postgres <<- EOSQL
+   CREATE EXTENSION pg_trgm;
+EOSQL
 fi
 echo ""
 echo "******DOCKER DATABASE CREATED******"
