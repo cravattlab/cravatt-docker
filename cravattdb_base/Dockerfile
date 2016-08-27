@@ -11,4 +11,3 @@ RUN apt-get update && apt-get -y install \
     git
 
 RUN pip3 install virtualenv
-RUN npm install -g gulp typescript typings concurrently
