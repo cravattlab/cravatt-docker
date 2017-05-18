@@ -9,6 +9,7 @@ RUN apt-get update && apt-get -y install \
     r-base \
     netcdf-bin \
     libnetcdf-dev \
+    imagemagick \
     pdftk
 
 RUN echo 'source("http://bioconductor.org/biocLite.R")' >> rscript.R
